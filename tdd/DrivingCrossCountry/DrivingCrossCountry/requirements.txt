@@ -1,0 +1,41 @@
+
+In this exercise, your goal is to write Java code that calculates the total distance 
+(in miles) and duration (in days and hours) of a trip from a city on one coast to a city on the other, while 
+traversing a specific set of cities along the way, for a family of 5 in an 18-year-old minivan pulling a big pop-up tent. 
+
+Your origin is Baltimore, MD. Your destination is San Francisco, CA. 
+
+Some constraints apply:
+----------------------
+
+You want to get to SF as quickly and cheaply as possible. Your cost is 75 cents per mile (Hey, it's an old minivan. It's pulling a trailer). 
+
+You must somehow distinguish between a quick stop (bathroom break, fill the tank, etc), or a "stopover". 
+
+You cannot go more than 4 hours of driving contiguously.
+You cannot go more than 10 hours total drivetime in a day without a stopover. 
+
+
+A "stopover" can be in a hotel, or in a campground, or at Aunt Sally's.
+You must stop at Aunt Sally's. You stand to inherit $10 M from her. Keep her happy. Bring her pie. 
+The minimum duration in a hotel is 12 hours. 
+The minimum duration in a campground is 16 hours. 
+The minimum duration at Aunt Sally's, of course, is 3 days. She prefers a weekend. She lives in Austin, TX. 
+
+You are budget-constrained: you cannot afford more than 3 hotel stays. Every other stopover must be at a campground. 
+
+---------------
+
+The Catch
+
+The catch is that you must implement a doubly-linked hold Places, and you must not use any Java collections (or Google or other collections libraries). 
+
+This doubly-linked ring must support the following API:
+
+-- addStop(Place place);
+-- removeStop(Place place);
+
+
+I'll make up more evil constraints as I think of them. That's all for now. :>
+
+----------------

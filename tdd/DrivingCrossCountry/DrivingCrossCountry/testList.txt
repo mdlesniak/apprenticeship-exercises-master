@@ -1,0 +1,20 @@
+
+
+//Test List: be prepared to prove that you can do each of these:
+
+//TODO Can create new Trip
+//TODO Can add Place to Trip
+//TODO Can add second Place to Trip
+//TODO Can retrieve Place from Trip by cityname
+//TODO Can get duration for drive from Place to next Place somehow. 
+//TODO Can get cost of driving from one Place to next Place somehow. 
+//TODO Total drive time, quickstop time, and stopover time (total time spent) per day  must be less than 24 hours. 
+//TODO You must track total duration and money spent during the trip. 
+
+//TODO Can retrieve total number of Places in Trip
+//TODO Can traverse Trip fully, asserting for each Place that you are at the correct place
+//TODO Can remove Place from Trip, including reference to that Place 
+//TODO Can create Origin (kind of Place) = Baltimore
+//TODO Can create Destination (kind of Place) = Destination
+//TODO Neither Origin nor Destination can be removed from Trip
+//TODO 

@@ -1,0 +1,37 @@
+//Acceptance Test List: be prepared to execute automated tests (of any kind) that prove that you can do each of these
+
+Run an entire simulated trip from origin to destination, reporting total miles traversed and duration, in days and hours. 
+
+Run an entire simulated trip in a way that reports origins and destinations of each leg as you go, with durations of the legs, and 
+durations of stopovers. 
+
+
+
+
+
+
+//Isolation Test List: be prepared to prove that you can do each of these:
+
+//DONE Can create new Trip
+//DONE Can add Place to Trip
+//DONE Can add second Place to Trip
+
+//DONE Can retrieve total number of Places in Trip
+
+
+//TODO Can retrieve Place from Trip by cityname
+//TODO Can get duration from last Place to this Place using getTimeFromLastPlace(). 
+//TODO Can get cost of driving from one Place to next Place somehow. 
+//TODO Total drive time, quickstop time, and stopover time (total time spent) per day  must be less than 24 hours. 
+//TODO You must track total duration and money spent during the trip. 
+
+
+//TODO Can get from Baltimore to Charlottesville
+
+//TODO Can retrieve total number of Places in Trip
+//TODO Can traverse Trip fully, asserting for each Place that you are at the correct place
+//TODO Can remove Place from Trip, including reference to that Place 
+//TODO Can create Origin (kind of Place) = Baltimore
+//TODO Can create Destination (kind of Place) = Destination
+//TODO Neither Origin nor Destination can be removed from Trip
+//TODO 

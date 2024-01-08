@@ -1,0 +1,45 @@
+
+In this exercise, your goal is to write Java code that calculates the total 
+	-- distance (in miles), 
+	-- duration (in days and hours), and 
+	-- cost in dollars 
+
+of a trip from a city on one coast to a city on the other, while 
+traversing a specified set of cities along the way, for a family of 5 and a small dog in an 18-year-old minivan pulling a big pop-up tent. 
+
+Your origin is Baltimore, MD. Your destination is San Francisco, CA. 
+
+Some constraints apply:
+----------------------
+
+You want to get to SF as quickly and cheaply as possible. 
+You can't run out of money. 
+The minivan gets 16 MPG  at 70 mph (it's old, and pulling a trailer). It gets 25mpg at 60 mph. It gets 28MPG at 50 mph.
+
+You must distinguish between a quick stop (bathroom break, fill the tank, lunch break), or a "stopover". 
+A quick stop can be at a rest area, a gas station, by the side of the road, or wherever you like. Hey, poopy diapers happen. 
+A "stopover" can be in a hotel, or in a campground, or at Aunt Sally's.
+
+You cannot go more than 4 hours of driving contiguously.
+You cannot go more than 10 hours total drive-time in a day without a stopover. 
+
+You must stop at Aunt Sally's. You stand to inherit $10 M from her. Keep her happy. Bring her pie. 
+The minimum duration of a quick stop is 20 minutes (you have 3 kids).
+The minimum duration in a hotel is 12 hours. 
+The minimum duration in a campground is 16 hours. 
+The minimum duration at Aunt Sally's, of course, is 3 days. She prefers a weekend. She lives in Austin, TX. 
+
+You cannot have more than 3 hotel stays, and every other stopover must be at a campground. 
+
+You have $4500 to spend. Every gas refill costs you $75 in gas. Every lunch out on the road costs you $30. Every dinner out costs you $45. 
+Every hotel stop costs you $225. Every Campground stop costs you $30. 
+Your daily average incidentals are $45. 
+At the end of your stay with Aunt Sally, she quietly slips you $500 cash and gives you a peck on the cheek. Guess you did good with that pie. 
+
+---------------
+
+You must be able to handle a random Emergency Stop of any of the following kind, by adjusting total trip duration, spending money as necessary. 
+You will be given your Emergencies as part of this exercise. They could be anything from the dog foaming at the mouth, to a kid with a broken arm, 
+to a busted axle. Be ready.
+
+ 

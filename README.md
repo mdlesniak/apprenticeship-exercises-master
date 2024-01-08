@@ -1,0 +1,4 @@
+apprenticeship-exercises
+========================
+
+Apprenticeship exercises

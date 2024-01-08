@@ -1,0 +1,113 @@
+
+A Tale of Two Codebases: Two Versions of 10 x 10 TicTacToe Game where First Player to 5-in-a-row Wins
+
+What you'll need for this series of exercises:
+
+-- Eclipse 3.2+
+
+Detailed Instructions:
+
+This Eclipse project consists of two different implementations of the same 10 x 10, first-to-5 TicTacToe game: an older, 
+legacy version, and a newer, mostly-test-driven replacement. Below we ask you to compare and learn about the two games, and to make some specific changes to the newer one. 
+
+First, make a copy of this ReadMe file and respond to questions below in-line. 
+
+NOTE: You need not spend more than 2 hours on this entire exercise, though you can feel free to spend as much time at it as you like. It can be a fun codebase to play in. 
+
+NOTE: It is perfectly alright for you to stop after you are done with Exercise One (A) and Exercise One (B).  Those two can easily consume two hours. IF YOU HAVE MORE TIME TO SPEND, 
+then feel free to continue to Exercise Two, but YOU ARE NOT OBLIGATED to do so. :)
+
+IMPORTANT: When you make changes to the code, please insert "//TODO" tag comments that label your changes with your name or 
+initials and the date, to make it easy for us to find them without your assistance. We can then find your changes easily in the Eclipse "tasks" view; which saves us time. 
+
+-----------
+
+The older game version consists of a single large class in its own source folder and package: legacy/legacyGame.LegacyGame. 
+The newer game version consists of the src/controller.gameplay.TicTacToeGame class, and several other classes 
+(in various packages).
+
+Right-click on the GameGUI applet in the package view.applet, to play the newer TicTacToeGame and get a feel for it. (You are X's, and the computer is O's.)
+The LegacyGame has its own applet in the legacyCode package, and you can run and look at the code.
+
+Look carefully at the LegacyGame class (in package legacy/legacyGame), and compare it to the new TicTacToeGame and its various classes (in packages src/model.gamestate, 
+src/model.patterns, and src/model.patternsearching). After comparing the old game and the new, write down some of the DESIGN DIFFERENCES between them. 
+
+ -- Can you tell any differences in overall game play strategy between the two games?
+ -- Can you mostly tell what is going on in the new game?
+ -- Can you mostly tell what is going on in the old game?
+ -- What do you like most and least about the old game design?
+ -- What do you like most and least about the new game design?
+ 
+You can learn more about the new game by looking at and running the unit tests in the test source folder. 
+ -- What do the unit tests tell you about the new game?
+ -- What do you like and not like about any of these TestCases and test methods? 
+ 
+ You can run the old game against the new game using the single test method in the OldGameAgainstNewGameTests TestCase in acceptanceTests.oldagainstnewgame. This test method is currently 
+ set to play the two games against each other 1000 times. 
+  -- What does running this TestCase tell you about the old and new games? 
+  
+Exercise One (A):
+  -- In the new TicTacToeGame, what would it take to enable the human player to win if they get 5 in a row, while the computer must get 6 in a row?   
+  -- Spend no more than about 45 minutes trying to test-drive this change, and then verify it manually by running the applet. 
+  
+Exercise One (B):  SPEND NO MORE THAN 20 MINUTES ON THIS PART. SERIOUSLY. :)
+  -- NOTE: This first exercise is mostly about READING code, not writing it. Don't let yourself get sucked too far into LegacyGame.java.  
+  -- In the old legacyGame TicTacToeGame, what would it take to enable the human player to continue to win if they get 5 in a row, while the computer must now get 6 in a row to win?   
+  -- Spend no more than about 20 minutes trying to hack this into place, with or without test-driving or unit tests, verifying manually with the applet. 
+
+  Write a few notes about what you've learned about the differences between the two games by writing just this much code, and doing this much analysis and comparison. 
+  
+*****   IF YOU HAVE USED UP TWO HOURS BY THIS POINT, feel free to stop here. If you have more time and are learning or having fun, feel free to continue. Think of it as extra credit.
+ 
+Exercise Two:
+This game is a just a TicTacToe game. In the related game called Pente, a pair of contiguous "stones" (marks) are removed if 
+they are blocked on each end by opposing player's stones (marks). (You can read more about Pente here:   http://en.wikipedia.org/wiki/Pente )
+ 
+ In this next exercise, actually test-drive the change in the test-driven codebase:
+  -- Test-drive the ability to "happen upon" an 'XOO-, where "-" is an empty spot' pattern, where you are X's and the other player is O's. 
+  -- Test-drive the ability to opportunistically create a 'XOOX' pattern, and then remove the two opposing player's 'OO's? 
+  -- Finally, verify the new behavior manually with the applet. 
+  
+Exercise Three:
+What glaring or subtle opportunities for refactoring can you find in the new game?  Do you have the test coverage you need to make them?
+  -- Are all of the unit tests well factored? 
+  -- Are all of the pattern finding classes compliant with the so-called "Single Responsibility Principle" (SRP)? 
+  -- If you can find a good refactoring opportunity in the new game, make the change in as test-protected a way as you can. 
+  
+Exercise Four: 
+  -- How would you evolve the TicTacToeGame strategy so that it pro-actively looks for opportunities to trap pairs of opposing player marks? 
+  -- Test-drive this change, and verify it manually with the applet GUI. 
+  
+Exercise Five:
+  OK, so this one takes many hours to complete. It's completely optional. If you don't have a job, or a life, and you are addicted 
+  to interesting code problems, feel free to try this one. The idea here is to test-drive a self-educating meta-TicTacToe game that learns how to combine moves most successfully to evolve 
+  an optimal strategy.  You may want to start with a fresh copy of the codebase, without the Pente behavior, as a starting point. (You can save a zip of what you ahve done so far, then just revert to the google code repository head again.)
+  
+   -- The current ExampleStrategy class uses a particular "hard-coded" strategy to gather up potential moves for any game state, weight those potential moves, and then choose a particular move to make. 
+   -- Test-drive a StrategyEvolver class that uses the same Domain Specific Language (DSL) of move pattern types, but tries different combinations of those move patterns, in different orders, 
+      assigning different weights to them. (Feel free to add any of your own interesting new pattern types, but test-drive them.)
+   -- Use a version of the manualTests test method to run each of your different combinations/weight assignments for different moves at least 200 times against the old game. 
+   -- Store the average wins, losses, and draws for each such combination, when your game goes first. 
+   -- Find the best overall strategy (move pattern and weight combination), and then find a way to encode that statically in a new OptimalStrategy class. 
+   
+   
+REFERENCES: 
+
+  To learn why this exercise is important, and the principles, patterns, and practices behind the differences between the legacy version and new 
+  version of the TicTacToeGame, consider the following books:
+  
+  Clean Code,  							by Robert C Martin
+  Test-Driven Development: By Example, 	by Kent Beck
+  Refactoring, 							by Martin Fowler
+  Working Effectively with Legacy Code, by Michael Feathers
+  xUnit Test Patterns, 					by Gerard Meszaros
+  Test Driven, 							by Lasse Koskela
+  
+ 
+ At the time of this writing, this set of books describes much of the knowledge that any "agile" Java developer should be familiar with. 
+  
+  
+  
+     
+
+  

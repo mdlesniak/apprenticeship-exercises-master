@@ -1,0 +1,1 @@
+These exercises should be attempted AFTER you have felt the pain of refactoring non-TDD code.
