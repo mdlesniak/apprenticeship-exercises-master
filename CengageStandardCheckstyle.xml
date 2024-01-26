@@ -29,8 +29,12 @@
     <module name="NPathComplexity">
       <property name="max" value="3"/>
     </module>
+    <module name="AvoidStarImport">
+      <property name="severity" value="error" />
+    </module>
   </module>
-  <module name="StrictDuplicateCode">
+  <module name="Simian">
     <property name="min" value="5"/>
   </module>
+
 </module>
