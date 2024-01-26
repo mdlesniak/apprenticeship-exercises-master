@@ -6,7 +6,7 @@ package com.cengage.apprenticeship;
  *                three) hiding in there?
  */
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
